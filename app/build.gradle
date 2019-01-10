@@ -16,10 +16,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
+    /*externalNativeBuild {
         ndkBuild {
             path '../../soundtouch-2.0.0/soundtouch/source/Android-lib/jni/Android.mk'
         }
+    }*/
+    
+    sourceSets {
+        main.jni.srcDirs = []
+        main.jniLibs.srcDirs = ['libs']
     }
 }
 
